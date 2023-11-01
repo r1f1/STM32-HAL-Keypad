@@ -1,5 +1,0 @@
-../Core/Src/main.c:67:5:main	2
-../Core/Src/main.c:117:6:SystemClock_Config	3
-../Core/Src/main.c:159:13:MX_GPIO_Init	1
-../Core/Src/main.c:190:22:keypad_init	1
-../Core/Src/main.c:216:6:Error_Handler	1

@@ -1,2 +1,0 @@
-../Bsp/keypad.c:46:22:keypad_create	88	static
-../Bsp/keypad.c:74:9:key_selected	24	static
