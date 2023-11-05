@@ -1,0 +1,56 @@
+\doxysection{keypad.\+h File Reference}
+\hypertarget{keypad_8h}{}\label{keypad_8h}\index{keypad.h@{keypad.h}}
+
+
+Functions declarations available to the user for working with a 4x4 Matrix Array Keypad.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em Store GPIO pins and ports in their corresponding struct member. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{keypad_8h_aee9088f8605de585366f07275bc17e03}{key\+\_\+selected}} (\mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}, uint8\+\_\+t \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Iterates every GPIO pin associated to the columns and the rows until the user press a button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions declarations available to the user for working with a 4x4 Matrix Array Keypad. 
+
+\begin{DoxyAuthor}{Author}
+Rafael Hernández Marrero (\href{mailto:rafaelh96@gmail.com}{\texttt{ rafaelh96@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2023 20\+:38\+:43  
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keypad_8h_aee9088f8605de585366f07275bc17e03}\label{keypad_8h_aee9088f8605de585366f07275bc17e03} 
+\index{keypad.h@{keypad.h}!key\_selected@{key\_selected}}
+\index{key\_selected@{key\_selected}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{key\_selected()}{key\_selected()}}
+{\footnotesize\ttfamily int32\+\_\+t key\+\_\+selected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}}]{keypad,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key }\end{DoxyParamCaption})}
+
+
+
+Iterates every GPIO pin associated to the columns and the rows until the user press a button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keypad} & Keypad handler. \\
+\hline
+{\em key} & Store the matching value from the matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t Returns 1 if a button is pressed and 0 if not. 
+\end{DoxyReturn}

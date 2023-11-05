@@ -28,6 +28,12 @@
 #define Keypad_PinDef uint16_t
 #define Keypad_PortDef GPIO_TypeDef*
 
+
+/**
+ * @struct Keypad_HandleTypeDef keypad.h "keypad.h"
+ * @brief Store GPIO pins and ports in their corresponding struct member.
+ *
+ */
 typedef struct{
 
 	Keypad_PinDef pin_rows[MATRIX_ARRAY];
@@ -40,10 +46,10 @@ typedef struct{
 
 //************************************** Function declarations **************************************//
 
+
 Keypad_HandleTypeDef keypad_create(Keypad_PinDef [], Keypad_PortDef [], Keypad_PinDef [], Keypad_PortDef []);
 
 int32_t key_selected(Keypad_HandleTypeDef*, uint8_t*);
-
 
 
 #endif /* KEYPAD_H_ */

@@ -16,6 +16,7 @@
 //*************************************** Matrix definition ****************************************//
 
 // Matrix with the keypad symbols, stored in a array in the same location as they are in the physical device
+
 const uint8_t Keys_matrix[MATRIX_ARRAY][MATRIX_ARRAY] = {
 								{ 1,     2,    3,   'A' },
 								{ 4,     5,    6,   'B' },
@@ -26,22 +27,15 @@ const uint8_t Keys_matrix[MATRIX_ARRAY][MATRIX_ARRAY] = {
 //************************************** Function definitions **************************************//
 
 
-/*************************************************************************************
- * @fn									- keypad_create
- *
- * @brief								- Initialise the keypad handler with the GPIO pins and GPIO ports configured by the user.
- *
- * @param[in]  pin_rows					- Array with the GPIO pins assigned to the ROWS.
- *
- * @param[in]  port_rows				- Array with the GPIO ports assigned to the ROWS.
- *
- * @param[in]  pin_columns				- Array with the GPIO pins assigned to the COLUMNS.
- *
- * @param[in]  port_columns				- Array with the GPIO ports assigned to the COLUMNS.
- *
- * @return 	   Keypad_HandleTypeDef		- Keypad handler.
+/**
+ * @fn Keypad_HandleTypeDef keypad_create(uint16_t[], GPIO_TypeDef*[], uint16_t[], GPIO_TypeDef*[])
+ * @brief Initialise the keypad handler with the GPIO pins and GPIO ports configured by the user.
+ * @param pin_rows Array with the GPIO pins assigned to the ROWS.
+ * @param port_rows Array with the GPIO ports assigned to the ROWS.
+ * @param pin_columns Array with the GPIO pins assigned to the COLUMNS.
+ * @param port_columns Array with the GPIO ports assigned to the COLUMNS.
+ * @return Keypad_HandleTypeDef Keypad handler.
  */
-
 
 Keypad_HandleTypeDef keypad_create(Keypad_PinDef pin_rows[], Keypad_PortDef port_rows[], Keypad_PinDef pin_columns[], Keypad_PortDef port_columns[]){
     Keypad_HandleTypeDef keypad;
@@ -58,18 +52,13 @@ Keypad_HandleTypeDef keypad_create(Keypad_PinDef pin_rows[], Keypad_PortDef port
     return keypad;
 }
 
-/*************************************************************************************
- * @fn						- key_selected
- *
- * @brief					- Iterates every gpio pin associated to the columns and the rows until the user press a button.
- *
- * @param[in]  keypad		- Keypad handler
- *
- * @param[in]  key			- Store the matching value from the matrix
- *
- * @return 	   int32_t		- Returns 1 if a button is pressed and 0 if not.
+/**
+ * @fn int32_t key_selected(Keypad_HandleTypeDef*, uint8_t*)
+ * @brief Iterates every GPIO pin associated to the columns and the rows until the user press a button.
+ * @param keypad Keypad handler.
+ * @param key Store the matching value from the matrix.
+ * @return int32_t Returns 1 if a button is pressed and 0 if not.
  */
-
 
 int32_t key_selected(Keypad_HandleTypeDef *keypad, uint8_t *key){
 

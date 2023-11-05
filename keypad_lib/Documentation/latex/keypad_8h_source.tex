@@ -1,0 +1,45 @@
+\doxysection{keypad.\+h}
+\hypertarget{keypad_8h_source}{}\label{keypad_8h_source}\mbox{\hyperlink{keypad_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ KEYPAD\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ KEYPAD\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//********************************************\ Includes\ ********************************************//}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//********************************************\ Helper\ Macros\ ********************************************//}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ MATRIX\_ARRAY\ \ \ \ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ NUM\_COL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MATRIX\_ARRAY}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ NUM\_ROW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MATRIX\_ARRAY}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//********************************************\ Keypad\ types\ ********************************************//}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ Keypad\_PinDef\ uint16\_t}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ Keypad\_PortDef\ GPIO\_TypeDef*}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ Keypad\_PinDef\ pin\_rows[MATRIX\_ARRAY];}
+\DoxyCodeLine{00040\ \ \ \ \ Keypad\_PortDef\ port\_rows[MATRIX\_ARRAY];}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ Keypad\_PinDef\ pin\_columns[MATRIX\_ARRAY];}
+\DoxyCodeLine{00043\ \ \ \ \ Keypad\_PortDef\ port\_columns[MATRIX\_ARRAY];}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \}\mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\_HandleTypeDef}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//**************************************\ Function\ declarations\ **************************************//}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\_HandleTypeDef}}\ keypad\_create(Keypad\_PinDef\ [],\ Keypad\_PortDef\ [],\ Keypad\_PinDef\ [],\ Keypad\_PortDef\ []);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ int32\_t\ \mbox{\hyperlink{keypad_8h_aee9088f8605de585366f07275bc17e03}{key\_selected}}(\mbox{\hyperlink{struct_keypad___handle_type_def}{Keypad\_HandleTypeDef}}*,\ uint8\_t*);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ KEYPAD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
